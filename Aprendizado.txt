@@ -2,3 +2,8 @@
 - Os diferentes tipos de testes automatizados que podemos escrever em uma aplicação;
 - A pirâmide de testes, de maneira bem resumida;
 - A configurar o projeto que será utilizado neste treinamento.
+
+• Aula 2
+- Que às vezes precisamos adaptar o nosso código para poder escrever os teste automatizados;
+- Que devemos preferir injeção de dependências via construtor, para facilitar na escrita dos testes automatizados;
+- A realizar as configurações da JPA para a execução dos testes de integração.
