@@ -7,3 +7,8 @@
 - Que às vezes precisamos adaptar o nosso código para poder escrever os teste automatizados;
 - Que devemos preferir injeção de dependências via construtor, para facilitar na escrita dos testes automatizados;
 - A realizar as configurações da JPA para a execução dos testes de integração.
+
+• Aula 3
+- A escrever outros cenários de testes;
+- A como utilizar os recursos do JUnit para organizar o código de testes;
+- A importância de manter o código de testes bem organizado e fácil de mante
