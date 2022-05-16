@@ -1,0 +1,4 @@
+• Aula 1
+- Os diferentes tipos de testes automatizados que podemos escrever em uma aplicação;
+- A pirâmide de testes, de maneira bem resumida;
+- A configurar o projeto que será utilizado neste treinamento.
