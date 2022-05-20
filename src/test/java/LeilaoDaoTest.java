@@ -3,6 +3,8 @@ import br.com.alura.leilao.dao.UsuarioDao;
 import br.com.alura.leilao.model.Leilao;
 import br.com.alura.leilao.model.Usuario;
 import br.com.alura.leilao.util.JPAUtil;
+import br.com.alura.leilao.util.LeilaoBuilder;
+import br.com.alura.leilao.util.UsuarioBuilder;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -32,8 +34,20 @@ public class LeilaoDaoTest {
 
     @Test
     public void deveriaCadastrarUmLeilao(){
-        Usuario usuario = criarUsuario();
-        Leilao leilao = new Leilao("Mochila", new BigDecimal("70"), LocalDate.now(), usuario);
+        Usuario usuario = new UsuarioBuilder()
+                .comNome("Fulano")
+                .comEmail("fulano@email.com")
+                .comSenha("12345678")
+                .criar();
+
+        em.persist(usuario);
+
+        Leilao leilao = new LeilaoBuilder()
+                .comNome("Mochila")
+                .comValorInicial("500")
+                .comUsuario(usuario)
+                .comData(LocalDate.now())
+                .criar();
 
         leilao = dao.salvar(leilao);
 
@@ -43,8 +57,20 @@ public class LeilaoDaoTest {
 
     @Test
     public void deveriaAtualizarUmLeilao(){
-        Usuario usuario = criarUsuario();
-        Leilao leilao = new Leilao("Mochila", new BigDecimal("70"), LocalDate.now(), usuario);
+        Usuario usuario = new UsuarioBuilder()
+                .comNome("Fulano")
+                .comEmail("fulano@email.com")
+                .comSenha("12345678")
+                .criar();
+
+        em.persist(usuario);
+
+        Leilao leilao = new LeilaoBuilder()
+                .comNome("Mochila")
+                .comValorInicial("500")
+                .comUsuario(usuario)
+                .comData(LocalDate.now())
+                .criar();
 
         leilao = dao.salvar(leilao);
 
@@ -58,10 +84,5 @@ public class LeilaoDaoTest {
         Assert.assertEquals(new BigDecimal(("400")), salvo.getValorInicial());
     }
 
-    private Usuario criarUsuario(){
-        Usuario usuario = new Usuario("fulano", "fulano@email.com","123456789");
-        em.persist(usuario);
-        return usuario;
-    }
 
 }
