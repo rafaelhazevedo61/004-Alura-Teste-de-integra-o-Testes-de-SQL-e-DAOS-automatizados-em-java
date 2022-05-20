@@ -17,3 +17,8 @@
 - A escrever testes de métodos de escrita no banco de dados;
 - A lidar com transação na escrita dos testes;
 - A como identificar e evitar escrever testes desnecessários.
+
+• Aula 5
+- A identificar os problemas de códigos duplicados nas classes de testes;
+- O padrão Test Data Builder;
+- Como implementar um Test Data Builder.
