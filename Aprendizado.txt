@@ -11,4 +11,9 @@
 • Aula 3
 - A escrever outros cenários de testes;
 - A como utilizar os recursos do JUnit para organizar o código de testes;
-- A importância de manter o código de testes bem organizado e fácil de mante
+- A importância de manter o código de testes bem organizado e fácil de manter
+
+• Aula 4
+- A escrever testes de métodos de escrita no banco de dados;
+- A lidar com transação na escrita dos testes;
+- A como identificar e evitar escrever testes desnecessários.
