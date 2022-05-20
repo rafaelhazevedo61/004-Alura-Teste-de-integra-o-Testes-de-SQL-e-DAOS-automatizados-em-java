@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
-public class UsuarioDAOTest {
+public class UsuarioDaoTest {
 
     private UsuarioDao dao;
     private EntityManager em;
